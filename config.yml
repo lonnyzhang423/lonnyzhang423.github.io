@@ -1,9 +1,4 @@
 baseURL: "https://lonnyzhang423.github.io/"
 languageCode: "zh-cn"
 title: "Be a producer not a consumer"
-theme: "hugo-notepadium"
-
-params: 
-    nav: 
-        showCategories: true
-        showTags: true
+theme: "hugo-theme-cactus-plus"
