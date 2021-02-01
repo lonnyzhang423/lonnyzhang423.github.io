@@ -7,4 +7,3 @@ params:
     nav: 
         showCategories: true
         showTags: true
-    share.enable: true
