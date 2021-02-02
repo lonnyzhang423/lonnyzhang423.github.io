@@ -2,3 +2,11 @@ baseURL: "https://lonnyzhang423.github.io/"
 languageCode: "zh-cn"
 title: "Be a producer not a consumer"
 theme: "hugo-theme-cactus-plus"
+hasCJKLanguage: true
+
+params:
+  author: "lonnyzhang423"
+  description: "Be a producer not a consumer"
+#   bio: "https://github.com/lonnyzhang423"
+
+  iconFont: "font-awesome"
