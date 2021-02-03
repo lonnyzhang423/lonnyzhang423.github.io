@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "nav.html" . }}
+
+    <section id="wrapper" class="home">
+        <article class="post">
+            <header>
+                <h1>404 - Page not found</h1>
+                <h3>所见的是暂时的，所不见的才是永恒的.</h3>
+                <!-- What is seen is temporary,what is unseen is eternal. -->
+            </header>
+
+            {{ partial "latest-posts.html" . }}
+        </article>
+
+        {{ partial "footer.html" . }}
+    </section>
+</body>
+
+</html>

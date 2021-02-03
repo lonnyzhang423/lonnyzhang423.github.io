@@ -10,7 +10,7 @@
                     {{ .Title }}
                 </h1>
                 <h2 class="headline">
-                    {{ .Date.Format "Jan 2, 2006 15:04" }}
+                    {{ .Date.Format "2006-01-02 15:04" }}
                     · {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
                     · {{ .ReadingTime }} minute read
                     <span class="tags">
@@ -35,10 +35,6 @@
                 {{ .Content }}
             </section>
         </article>
-
-        {{ if .Site.Params.showLatestPosts }}
-        {{ partial "latest-posts.html" . }}
-        {{ end }}
 
         {{ partial "footer.html" . }}
     </section>

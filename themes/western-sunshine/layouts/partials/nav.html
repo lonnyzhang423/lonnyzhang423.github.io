@@ -1,0 +1,9 @@
+<nav class="main-nav">
+	{{ $url := replace .Permalink .Site.BaseURL "" }}
+	{{ if not .IsHome }}
+	<a href='{{ .Site.BaseURL }}'> <span class="arrow">←</span>首页</a>
+	{{ end }}
+	<a href='{{ .Site.BaseURL }}posts'>归档</a>
+	<a href='{{ .Site.BaseURL }}tags'>标签</a>
+	<a href='{{ .Site.BaseURL }}about'>关于</a>
+</nav>
