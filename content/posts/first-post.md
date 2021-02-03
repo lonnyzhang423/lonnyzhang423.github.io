@@ -1,12 +1,9 @@
 ---
-title: "First Post"
+title: "first post"
 date: 2021-02-01T13:54:59+08:00
 draft: false
 ---
 
-## title
-
-First post
 
 ## body
 
