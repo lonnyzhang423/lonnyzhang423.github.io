@@ -1,9 +1,8 @@
 <ul id="post-list" class="archive readmore">
-    <h3>{{ .Site.Params.readMore | default "Read more" }}</h3>
+    <h3>更多</h3>
 
-    {{ $kind := where .Site.RegularPages "Section" "!=" "" }}
-    {{ $othr := where $kind "URL" "!=" .URL }}
-    {{ range first 10 $othr }}
+    {{ $posts := where .Site.RegularPages "Section" "eq" "posts" }}
+    {{ range first 10 $posts }}
     <li>
         <a href="{{ .URL }}">{{ .LinkTitle }}<aside class="dates">{{ .Date.Format "2006-01-02" }}</aside></a>
     </li>

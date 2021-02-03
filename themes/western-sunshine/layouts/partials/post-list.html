@@ -1,13 +1,12 @@
 <ul id="post-list">
-    {{ range where .Paginator.Pages "Params.hidden" "ne" "true" }}
-    {{ $url := replace .Permalink .Site.BaseURL "" }}
-    {{ if ne $url "about/" }}
+    <!-- 筛选出top10的文章 -->
+    {{ $top10Posts := where .Paginator.Pages "Section" "eq" "posts" }}
+    {{ range $top10Posts }}
     <li>
         <aside class="dates">{{ .Date.Format "2006-01-02" }}</aside>
-        <a href='{{ .Permalink }}'>
+        <a href="{{ .Permalink }}">
             {{ .Title }}
         </a>
     </li>
-    {{ end }}
     {{ end }}
 </ul>
