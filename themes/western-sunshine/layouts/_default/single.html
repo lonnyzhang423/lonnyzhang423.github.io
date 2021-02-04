@@ -24,7 +24,9 @@
                     </span>
                 </h2>
             </header>
-            {{ if .Site.Params.enableToc }}
+            <!-- 全局开启并且单页开启 -->
+            {{ $enableToc := and (.Site.Params.enableToc | default true) (.Params.enableToc | default true) }}
+            {{ if $enableToc }}
             {{ if .TableOfContents }}
             <div id="toc">
                 {{ .TableOfContents }}
