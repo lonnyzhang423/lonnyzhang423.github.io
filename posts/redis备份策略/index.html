@@ -2,8 +2,6 @@
 <a href=https://lonnyzhang423.github.io/posts>归档</a>
 <a href=https://lonnyzhang423.github.io/tags>标签</a>
 <a href=https://lonnyzhang423.github.io/about>关于</a></nav><section id=wrapper class=post><article><header><h1>Redis备份策略</h1><h2 class=headline>2020-02-01 13:54
-· 142 words
-· 1 minute read
 <span class=tags><a href=https://lonnyzhang423.github.io/tags/redis>redis</a>
 <a href=https://lonnyzhang423.github.io/tags/fork>fork</a></span></h2></header><div id=toc><nav id=TableOfContents><ul><li><a href=#body>body</a></li></ul></nav></div><section id=post-body><h1 id=概述>概述</h1><p>Redis 是一个纯内存的型的键值服务，在特定的时候会进行数据持久化的操作，有两种方式：RDB 和 AOF，
 RDB 基于快照实现，AOF 基于命令追加实现。出于性能考虑，RDB 备份通常是通过 fork 主进程的方式在子进程执行，那么在 fork 执行完这一时刻会有父子两个一模一样的进程，这时候 Redis 会占用两倍的系统内存吗？</p><h2 id=body>body</h2></section></article><footer id=footer><p class=small>© Copyright 2021 <i class="fa fa-heart" aria-hidden=true></i>lonnyzhang423</p><p class=small>Powered by <a href=https://www.gohugo.io/>Hugo</a></p></footer></section><script src=https://lonnyzhang423.github.io/js/jquery-3.3.1.min.js></script><script src=https://lonnyzhang423.github.io/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
