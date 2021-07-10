@@ -11,8 +11,6 @@
                 </h1>
                 <h2 class="headline">
                     {{ .Date.Format "2006-01-02 15:04" }}
-                    · {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
-                    · {{ .ReadingTime }} minute read
                     <span class="tags">
                         {{ with .Params.tags }}
                         {{ if ge (len .) 1 }}

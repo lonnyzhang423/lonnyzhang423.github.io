@@ -1,7 +1,7 @@
 baseURL: "https://lonnyzhang423.github.io/"
 languageCode: "zh-cn"
 title: "Be a producer not a consumer"
-theme: "western-sunshine"
+theme: "nobody"
 hasCJKLanguage: true
 
 params:
