@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ hugo.Generator }}
+
+<!-- 标题 -->
+{{ if eq .RelPermalink "/" }}
+<title>{{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:type" content="website">
+{{ else }}
+<title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+{{ end }}
+
+<!-- 小图标 -->
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico">
+
+<!-- 描述 -->
+{{ if eq .RelPermalink "/" }}
+<meta property="description" content="{{ .Site.Params.description }}">
+{{ else }}
+{{ if .Description }}
+<meta property="description" content="{{ .Description }}">
+{{ end }}
+{{ end }}
+
+<!-- 关键字 -->
+{{ if .Keywords }}
+<meta property="keywords" content="{{ delimit .Keywords " , " }}">
+{{ end }}
+
+<!-- 样式 -->
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts.css" media="all">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" media="all">
+
+<!-- 高亮样式 -->
+{{ partial "head_highlightjs" . }}

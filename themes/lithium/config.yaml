@@ -1,0 +1,11 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "A Hugo website"
+
+menu:
+  main:
+    - name: "GitHub"
+      url: "https://github.com/foobar"
+
+    - name: "关于"
+      url: "/about"

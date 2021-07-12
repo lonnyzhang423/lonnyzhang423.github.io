@@ -1,0 +1,13 @@
+<nav class="nav">
+  <a href='{{ .Site.BaseURL }}' class="nav-logo">
+  </a>
+
+  <ul class="nav-links">
+    {{ if not .IsHome }}
+    <li><a href='{{ .Site.BaseURL }}'>首页</a></li>
+    {{ end }}
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
