@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo on Be a producer not a consumer</title><link>https://lonnyzhang423.github.io/tags/demo/</link><description>Recent content in Demo on Be a producer not a consumer</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 02 Feb 2020 15:02:34 +0800</lastBuildDate><atom:link href="https://lonnyzhang423.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml"/><item><title>Demo</title><link>https://lonnyzhang423.github.io/posts/demo/</link><pubDate>Sun, 02 Feb 2020 15:02:34 +0800</pubDate><guid>https://lonnyzhang423.github.io/posts/demo/</guid><description>title hello world
 section1 foo bar coder code
-#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; int main(){ printf(&amp;quot;hello world&amp;quot;); exit(0); } section2 twitter
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt; int main(){ printf(&amp;#34;hello world&amp;#34;); exit(0); } import java.lang public class Main{ private String a; public static void main(){ println(&amp;#34;lonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnng text...&amp;#34;); } } section2 twitter
 facebook
 body1 body2 body3</description></item></channel></rss>
