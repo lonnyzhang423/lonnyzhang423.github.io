@@ -18,13 +18,25 @@ hello world
 
 `code`
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(){
     printf("hello world");
     exit(0);
+}
+```
+
+```java
+import java.lang
+
+public class Main{
+    private String a;
+
+    public static void main(){
+        println("lonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnng text...");
+    }
 }
 ```
 
