@@ -1,6 +1,0 @@
-name = "western-sunshine"
-license = "MIT"
-description = "No Man's Land."
-tags = ["blog", "beautiful", "syntax highlighting", "tags"]
-features = ["blog", "beautiful", "syntax highlighting", "tags"]
-min_version = 0.01
