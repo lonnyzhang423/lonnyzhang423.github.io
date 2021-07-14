@@ -25,7 +25,6 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.79.0"
-          # extended: true
 
       # 配置git
       - name: Config git
@@ -38,8 +37,10 @@ jobs:
       # 部署
       - name: Deploy
         run: |
+          # 基于gh-pages分支新建工作目录
+          git worktree add -b gh-pages public origin/gh-pages
           rm -rf public
-          git worktree add -B gh-pages public origin/gh-pages
+          # 生成网页
           hugo --minify
           cd public
           git add .
