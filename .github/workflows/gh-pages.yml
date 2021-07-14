@@ -37,9 +37,9 @@ jobs:
       # 部署
       - name: Deploy
         run: |
-          # 基于gh-pages分支新建工作目录
-          git worktree add -b gh-pages public origin/gh-pages
-          rm -rf public
+          # 基于gh-pages分支新建工作目录,并清除旧的文件
+          git worktree add -B gh-pages public origin/gh-pages
+          rm -rf public/*
           # 生成网页
           hugo --minify
           cd public
