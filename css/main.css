@@ -6,10 +6,23 @@ body {
 }
 
 body {
+  font-family: Georgia, serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav,
+.article-duration,
+.archive-item-link,
+.footer {
+  font-family: Courier, monospace;
 }
 
 h1,
