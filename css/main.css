@@ -45,6 +45,10 @@ code {
   background-color: #e9e9e9;
 }
 
+pre > code {
+  padding: 0px;
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
@@ -247,21 +251,6 @@ code {
   color: #222;
 }
 
-.footer-links li::before {
-  content: "/";
-  position: relative;
-  left: -2px;
-}
-
-.footer-links li:first-child::before {
-  display: none;
-}
-.footer-links-kudos img {
-  position: relative;
-  top: 6px;
-  margin-left: 2px;
-}
-
 @media (min-width: 600px) {
   .header {
     padding: 25px 0;
@@ -319,15 +308,5 @@ code {
 
   .footer-links {
     font-size: inherit;
-  }
-}
-
-@media print {
-  .header,
-  .footer {
-    display: none;
-  }
-  .article-content a {
-    box-shadow: none;
   }
 }
