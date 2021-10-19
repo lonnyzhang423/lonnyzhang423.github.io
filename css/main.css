@@ -134,6 +134,17 @@ pre > code {
   color: #ccc;
 }
 
+.article-tag {
+  margin-left: 3px;
+  padding: 2px 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #9eabb3;
+  border: #e3e9ed 1px solid;
+  transition: color 0.3s ease;
+}
+
 .article-duration {
   margin-top: 12px;
   float: right;
@@ -170,6 +181,20 @@ pre > code {
   overflow: hidden;
   border: none;
   background: #e5e5e5;
+}
+
+/* 全部标签页面 */
+.tag {
+  display: inline-block;
+  margin-left: 4px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: #333;
+  border: #e3e9ed 1px solid;
+  transition: color 0.3s ease;
 }
 
 .highlight {
