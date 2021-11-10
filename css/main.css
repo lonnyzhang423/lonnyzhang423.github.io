@@ -40,8 +40,10 @@ a {
 
 code {
   border-radius: 2px;
-  padding: 4px;
+  padding: 2px 4px;
   color: #333;
+  font-size: 0.9em;
+  font-family: "Courier New", Courier, monospace;
   background-color: #e9e9e9;
 }
 
