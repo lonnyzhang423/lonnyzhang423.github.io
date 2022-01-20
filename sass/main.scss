@@ -1,0 +1,262 @@
+$primary-color: #333 !default;
+$secondary-color: #ccc !default;
+$title-color: #222 !default;
+$link-color: #cbf8df !default;
+
+$bg-white: #fff !default;
+$bg-gray: #f5f5f5 !default;
+$divider: #eaeaea !default;
+
+// ========== Global ========== //
+// Text color of the body.
+$global-font-color: $primary-color;
+
+// Font size attribute applied to '<html>' and '<body>'.
+$global-font-size: 16px !default;
+
+// Global width of '<body>'.
+$global-body-width: 800px !default;
+
+// Padding of container main
+$global-container-padding: 0 20px !default;
+
+// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px.
+$global-lineheight: 1.5 !default;
+
+// Font family of the site.
+$global-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+
+// Serif font family of the site.
+$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
+
+// Background color of the site.
+$global-background: $bg-white;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: $global-font-color;
+  background: $bg-white;
+  font-size: $global-font-size;
+  font-size: $global-font-size;
+  font-family: $global-font-family;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  padding: 1rem 0;
+  position: relative;
+  background: $bg-gray;
+  border-bottom: 1px solid $divider;
+}
+
+// 导航
+.nav {
+  max-width: $global-body-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: right;
+
+  .nav-logo {
+    float: left;
+    margin-top: -11px;
+    transition: transform 150ms ease-out;
+  }
+
+  .nav-logo:hover {
+    transform: scale(1.1);
+  }
+
+  .nav-logo img {
+    display: block;
+    max-height: 2.6rem;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 0 0 0 1rem;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $title-color;
+    }
+
+    a:hover {
+      color: #000;
+    }
+  }
+}
+
+// 主要内容
+.main {
+  max-width: $global-body-width;
+  margin: 2rem auto 0.6rem;
+  padding: $global-container-padding;
+  line-height: 1.8;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// 文章
+.article {
+  .article-title {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .article-date {
+    color: $secondary-color;
+  }
+
+  .article-tag {
+    margin-left: 3px;
+    padding: 2px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: $secondary-color;
+    border: #e3e9ed 1px solid;
+    transition: color 0.3s ease;
+  }
+
+  .article-content p {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .article-content a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid $link-color;
+    box-shadow: inset 0 -4px 0 $link-color;
+    background: transparent;
+    transition: background 150ms ease;
+  }
+
+  .article-content a:hover,
+  .article-content a:focus {
+    background: $link-color;
+  }
+}
+
+// 文章列表
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.3;
+  text-align: center;
+
+  .post-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .post-item {
+    margin: 0.3rem 0 1rem;
+    padding: 0;
+  }
+
+  .post-item-date {
+    color: $secondary-color;
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  .post-item-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .post-item-link:hover {
+    border-bottom-color: $title-color;
+  }
+}
+
+/* 标签列表 */
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8;
+  outline: none;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+    border-bottom: 3px solid $link-color;
+    box-shadow: inset 0 -4px 0 $link-color;
+    background: transparent;
+    transition: background 150ms ease;
+  }
+}
+
+// 高亮
+.highlight {
+  border-radius: 3px;
+  position: relative;
+  margin: 20px 0px;
+  font-size: 16px;
+}
+
+// 底部
+.footer {
+  padding: 1.5rem 0;
+  text-align: center;
+
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $secondary-color;
+    font-size: 0.8rem;
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    a {
+      color: #888;
+      text-decoration: none;
+      transition: color 150ms ease;
+      margin: 0 15px;
+    }
+
+    a:hover,
+    a:focus {
+      color: #222;
+    }
+  }
+}
