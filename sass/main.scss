@@ -1,11 +1,12 @@
 $primary-color: #333 !default;
 $secondary-color: #ccc !default;
 $title-color: #222 !default;
-$link-color: #cbf8df !default;
+$highlight-link: #cbf8df !default;
+$normal-link: #ddd !default;
 
 $bg-white: #fff !default;
 $bg-gray: #f5f5f5 !default;
-$divider: #eaeaea !default;
+$divider-color: #eaeaea !default;
 
 // ========== Global ========== //
 // Text color of the body.
@@ -17,17 +18,8 @@ $global-font-size: 16px !default;
 // Global width of '<body>'.
 $global-body-width: 800px !default;
 
-// Padding of container main
-$global-container-padding: 0 20px !default;
-
-// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px.
-$global-lineheight: 1.5 !default;
-
 // Font family of the site.
 $global-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
-
-// Serif font family of the site.
-$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
 
 // Background color of the site.
 $global-background: $bg-white;
@@ -38,7 +30,7 @@ body {
   padding: 0;
   position: relative;
   color: $global-font-color;
-  background: $bg-white;
+  background: $global-background;
   font-size: $global-font-size;
   font-size: $global-font-size;
   font-family: $global-font-family;
@@ -47,7 +39,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $title-color;
+}
+
+a {
+  outline: none;
+}
+
+.app {
   overflow: hidden;
   position: relative;
 }
@@ -56,7 +61,7 @@ body {
   padding: 1rem 0;
   position: relative;
   background: $bg-gray;
-  border-bottom: 1px solid $divider;
+  border-bottom: 1px solid $divider-color;
 }
 
 // 导航
@@ -66,26 +71,10 @@ body {
   padding: 0 1rem;
   text-align: right;
 
-  .nav-logo {
-    float: left;
-    margin-top: -11px;
-    transition: transform 150ms ease-out;
-  }
-
-  .nav-logo:hover {
-    transform: scale(1.1);
-  }
-
-  .nav-logo img {
-    display: block;
-    max-height: 2.6rem;
-    width: auto;
-    border-radius: 50%;
-  }
-
   .nav-links {
     margin: 0;
     padding: 0;
+    font-size: 1rem;
     list-style: none;
 
     li {
@@ -101,10 +90,6 @@ body {
       text-decoration: none;
       color: $title-color;
     }
-
-    a:hover {
-      color: #000;
-    }
   }
 }
 
@@ -112,7 +97,8 @@ body {
 .main {
   max-width: $global-body-width;
   margin: 2rem auto 0.6rem;
-  padding: $global-container-padding;
+  padding: 0 1.2rem;
+  font-size: 1rem;
   line-height: 1.8;
 
   img {
@@ -124,6 +110,7 @@ body {
 .article {
   .article-title {
     font-size: 2rem;
+    color: $title-color;
     margin: 0;
     line-height: 1.3;
   }
@@ -137,9 +124,9 @@ body {
     padding: 2px 8px;
     text-decoration: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: $secondary-color;
-    border: #e3e9ed 1px solid;
+    border: $secondary-color 1px solid;
     transition: color 0.3s ease;
   }
 
@@ -150,15 +137,15 @@ body {
   .article-content a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 3px solid $link-color;
-    box-shadow: inset 0 -4px 0 $link-color;
+    border-bottom: 3px solid $highlight-link;
+    box-shadow: inset 0 -4px 0 $highlight-link;
     background: transparent;
     transition: background 150ms ease;
   }
 
   .article-content a:hover,
   .article-content a:focus {
-    background: $link-color;
+    background: $highlight-link;
   }
 }
 
@@ -182,19 +169,20 @@ body {
 
   .post-item-date {
     color: $secondary-color;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.3rem 0;
     margin-top: 0.3rem;
     display: block;
   }
 
   .post-item-link {
+    color: $title-color;
     display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.3rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $normal-link;
   }
 
   .post-item-link:hover {
@@ -214,10 +202,15 @@ body {
     text-decoration: none;
     color: inherit;
     font-size: 1.1rem;
-    border-bottom: 3px solid $link-color;
-    box-shadow: inset 0 -4px 0 $link-color;
+    border-bottom: 3px solid $highlight-link;
+    box-shadow: inset 0 -4px 0 $highlight-link;
     background: transparent;
     transition: background 150ms ease;
+  }
+
+  a:hover,
+  a:focus {
+    background: $highlight-link;
   }
 }
 
@@ -225,8 +218,8 @@ body {
 .highlight {
   border-radius: 3px;
   position: relative;
-  margin: 20px 0px;
-  font-size: 16px;
+  margin: 1.2rem 0px;
+  font-size: 1rem;
 }
 
 // 底部
@@ -248,15 +241,50 @@ body {
     }
 
     a {
-      color: #888;
+      color: $secondary-color;
       text-decoration: none;
       transition: color 150ms ease;
-      margin: 0 15px;
+      margin: 0 1rem;
     }
 
     a:hover,
     a:focus {
-      color: #222;
+      color: $title-color;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+
+  .nav-links {
+    font-size: 1.1rem;
+  }
+
+  .posts {
+    text-align: left;
+  }
+
+  .post-item-date {
+    font-size: 1.1rem;
+    text-align: right;
+    float: right;
+  }
+
+  .post-item-link {
+    text-overflow: ellipsis;
+    max-width: calc(100% - 120px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-links {
+    font-size: inherit;
   }
 }

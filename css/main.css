@@ -1,28 +1,17 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
   padding: 0;
   position: relative;
+  color: #333;
+  background: #fff;
   font-size: 16px;
-}
-
-body {
-  font-family: Georgia, serif;
+  font-size: 16px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.nav,
-.archive-item-link,
-.footer {
-  font-family: "Courier New", Courier, monospace;
 }
 
 h1,
@@ -38,26 +27,13 @@ a {
   outline: none;
 }
 
-/* code {
-  border-radius: 2px;
-  padding: 2px 4px;
-  color: #333;
-  font-size: 0.9em;
-  font-family: "Courier New", Courier, monospace;
-  background-color: #e9e9e9;
-} */
-
-/* pre > code {
-  padding: 0px;
-} */
-
-.wrapper {
+.app {
   overflow: hidden;
   position: relative;
 }
 
 .header {
-  padding: 16px 0;
+  padding: 1rem 0;
   position: relative;
   background: #f5f5f5;
   border-bottom: 1px solid #eaeaea;
@@ -66,95 +42,61 @@ a {
 .nav {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 1rem;
   text-align: right;
 }
-
-.nav-logo {
-  float: left;
-  margin-top: -11px;
-  transition: transform 150ms ease-out;
-}
-
-.nav-logo:hover {
-  transform: scale(1.1);
-}
-
-.nav-logo img {
-  display: block;
-  max-height: 40px;
-  width: auto;
-  border-radius: 50%;
-}
-
-.nav-links {
+.nav .nav-links {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 1rem;
   list-style: none;
 }
-
-.nav-links li {
+.nav .nav-links li {
   display: inline-block;
-  margin: 0 0 0 16px;
+  margin: 0 0 0 1rem;
 }
-
-.nav-links li:first-child {
+.nav .nav-links li:first-child {
   margin-left: 0;
 }
-
-.nav-links a {
+.nav .nav-links a {
   text-decoration: none;
-  color: #111;
-}
-
-.nav-links a:hover {
-  color: #000;
+  color: #222;
 }
 
 .main {
   max-width: 800px;
-  margin: 40px auto 10px;
-  padding: 0 16px;
-  font-size: 16px;
-  color: #333;
+  margin: 2rem auto 0.6rem;
+  padding: 0 1.2rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
-
 .main img {
   max-width: 100%;
 }
 
-.article {
-}
-
-.article-title {
-  font-size: 32px;
+.article .article-title {
+  font-size: 2rem;
   color: #222;
   margin: 0;
   line-height: 1.3;
 }
-
-.article-date {
+.article .article-date {
   color: #ccc;
 }
-
-.article-tag {
+.article .article-tag {
   margin-left: 3px;
   padding: 2px 8px;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 16px;
-  color: #9eabb3;
-  border: #e3e9ed 1px solid;
+  font-size: 0.9rem;
+  color: #ccc;
+  border: #ccc 1px solid;
   transition: color 0.3s ease;
 }
-
-.article-content p {
-  margin: 16px 0 24px;
+.article .article-content p {
+  margin: 1rem 0 1.5rem;
 }
-
-.article-content a {
+.article .article-content a {
   text-decoration: none;
   color: inherit;
   border-bottom: 3px solid #cbf8df;
@@ -162,156 +104,122 @@ a {
   background: transparent;
   transition: background 150ms ease;
 }
-
-.article-content a:hover,
-.article-content a:focus {
+.article .article-content a:hover,
+.article .article-content a:focus {
   background: #cbf8df;
 }
 
-.article-content hr {
-  width: 150px;
-  margin: 50px auto;
-  height: 1px;
-  overflow: hidden;
-  border: none;
-  background: #e5e5e5;
-}
-
-/* 归档列表 */
-.archive {
+.posts {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 1.3;
   text-align: center;
-  color: #111;
 }
-
-.archive-title {
-  font-size: 32px;
-  margin-top: 60px;
+.posts .post-title {
+  font-size: 2rem;
+  margin-top: 3rem;
 }
-
-.archive-item {
-  margin: 5px 0 16px;
+.posts .post-item {
+  margin: 0.3rem 0 1rem;
   padding: 0;
 }
-
-.archive-item-date {
+.posts .post-item-date {
   color: #ccc;
-  font-size: 14px;
-  padding: 5px 0;
-  margin-top: 5px;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  margin-top: 0.3rem;
   display: block;
 }
-
-.archive-item-link {
+.posts .post-item-link {
+  color: #222;
   display: inline-block;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #222;
-  padding: 5px 0;
+  padding: 0.3rem 0;
   border-bottom: 1px solid #ddd;
 }
-
-.archive-item-link:hover {
+.posts .post-item-link:hover {
   border-bottom-color: #222;
 }
 
-/* 全部标签页 */
+/* 标签列表 */
 .tags {
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1.6;
+  line-height: 1.8;
   outline: none;
 }
-
 .tags a {
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 1.1rem;
   border-bottom: 3px solid #cbf8df;
   box-shadow: inset 0 -4px 0 #cbf8df;
   background: transparent;
   transition: background 150ms ease;
+}
+.tags a:hover,
+.tags a:focus {
+  background: #cbf8df;
 }
 
 .highlight {
   border-radius: 3px;
   position: relative;
-  margin: 20px 0px;
-  font-size: 16px;
+  margin: 1.2rem 0px;
+  font-size: 1rem;
 }
 
 .footer {
-  padding: 25px 0;
+  padding: 1.5rem 0;
   text-align: center;
 }
-
-.footer-links {
+.footer .footer-links {
   list-style: none;
   margin: 0;
   padding: 0;
   color: #ccc;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
-
-.footer-links li {
+.footer .footer-links li {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-
-.footer-links a {
-  color: #888;
+.footer .footer-links a {
+  color: #ccc;
   text-decoration: none;
   transition: color 150ms ease;
-  margin: 0 15px;
+  margin: 0 1rem;
 }
-
-.footer-links a:hover,
-.footer-links a:focus {
+.footer .footer-links a:hover,
+.footer .footer-links a:focus {
   color: #222;
 }
 
 @media (min-width: 600px) {
   .header {
-    padding: 25px 0;
-  }
-
-  .nav-logo {
-    margin-top: -13px;
-  }
-
-  .nav-logo img {
-    max-height: 50px;
+    padding: 1.5rem 0;
   }
 
   .nav-links {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
-  .nav-links li {
-    margin: 0 0 0 30px;
-  }
-
-  .archive {
+  .posts {
     text-align: left;
   }
 
-  .archive-title {
-    font-size: 38px;
-  }
-
-  .archive-item-date {
-    font-size: 18px;
+  .post-item-date {
+    font-size: 1.1rem;
     text-align: right;
     float: right;
   }
 
-  .archive-item-link {
+  .post-item-link {
     text-overflow: ellipsis;
     max-width: calc(100% - 120px);
     white-space: nowrap;
@@ -319,10 +227,12 @@ a {
   }
 
   .article-title {
-    font-size: 42px;
+    font-size: 1.5rem;
   }
 
   .footer-links {
     font-size: inherit;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
