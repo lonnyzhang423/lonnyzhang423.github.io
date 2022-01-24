@@ -21,6 +21,9 @@ $global-body-width: 800px !default;
 // Font family of the site.
 $global-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
 
+// Code font family of the site.
+$global-code-font-family: "Courier New", Courier, monospace !default;
+
 // Background color of the site.
 $global-background: $bg-white;
 
@@ -46,6 +49,15 @@ h4,
 h5,
 h6 {
   color: $title-color;
+}
+
+code {
+  border-radius: 2px;
+  padding: 2px 4px;
+  color: $primary-color;
+  font-size: 0.9rem;
+  font-family: $global-code-font-family;
+  background-color: $divider-color;
 }
 
 .app {
