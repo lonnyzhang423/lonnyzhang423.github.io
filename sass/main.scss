@@ -48,10 +48,6 @@ h6 {
   color: $title-color;
 }
 
-a {
-  outline: none;
-}
-
 .app {
   overflow: hidden;
   position: relative;
@@ -120,18 +116,13 @@ a {
   }
 
   .article-tag {
-    margin-left: 3px;
+    margin-left: 2px;
     padding: 2px 8px;
     text-decoration: none;
     border-radius: 4px;
     font-size: 0.9rem;
     color: $secondary-color;
     border: $secondary-color 1px solid;
-    transition: color 0.3s ease;
-  }
-
-  .article-content p {
-    margin: 1rem 0 1.5rem;
   }
 
   .article-content a {
@@ -167,14 +158,6 @@ a {
     padding: 0;
   }
 
-  .post-item-date {
-    color: $secondary-color;
-    font-size: 0.9rem;
-    padding: 0.3rem 0;
-    margin-top: 0.3rem;
-    display: block;
-  }
-
   .post-item-link {
     color: $title-color;
     display: inline-block;
@@ -188,6 +171,14 @@ a {
   .post-item-link:hover {
     border-bottom-color: $title-color;
   }
+
+  .post-item-date {
+    color: $secondary-color;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    margin-top: 0.3rem;
+    display: block;
+  }
 }
 
 /* 标签列表 */
@@ -200,7 +191,6 @@ a {
 
   a {
     text-decoration: none;
-    color: inherit;
     font-size: 1.1rem;
     border-bottom: 3px solid $highlight-link;
     box-shadow: inset 0 -4px 0 $highlight-link;
@@ -265,26 +255,22 @@ a {
 
   .posts {
     text-align: left;
-  }
 
-  .post-item-date {
-    font-size: 1.1rem;
-    text-align: right;
-    float: right;
-  }
+    .post-item-link {
+      text-overflow: ellipsis;
+      max-width: calc(100% - 120px);
+      white-space: nowrap;
+      overflow: hidden;
+    }
 
-  .post-item-link {
-    text-overflow: ellipsis;
-    max-width: calc(100% - 120px);
-    white-space: nowrap;
-    overflow: hidden;
+    .post-item-date {
+      font-size: 1.1rem;
+      text-align: right;
+      float: right;
+    }
   }
 
   .article-title {
     font-size: 1.5rem;
-  }
-
-  .footer-links {
-    font-size: inherit;
   }
 }

@@ -23,10 +23,6 @@ h6 {
   color: #222;
 }
 
-a {
-  outline: none;
-}
-
 .app {
   overflow: hidden;
   position: relative;
@@ -84,17 +80,13 @@ a {
   color: #ccc;
 }
 .article .article-tag {
-  margin-left: 3px;
+  margin-left: 2px;
   padding: 2px 8px;
   text-decoration: none;
   border-radius: 4px;
   font-size: 0.9rem;
   color: #ccc;
   border: #ccc 1px solid;
-  transition: color 0.3s ease;
-}
-.article .article-content p {
-  margin: 1rem 0 1.5rem;
 }
 .article .article-content a {
   text-decoration: none;
@@ -124,13 +116,6 @@ a {
   margin: 0.3rem 0 1rem;
   padding: 0;
 }
-.posts .post-item-date {
-  color: #ccc;
-  font-size: 0.9rem;
-  padding: 0.3rem 0;
-  margin-top: 0.3rem;
-  display: block;
-}
 .posts .post-item-link {
   color: #222;
   display: inline-block;
@@ -143,6 +128,13 @@ a {
 .posts .post-item-link:hover {
   border-bottom-color: #222;
 }
+.posts .post-item-date {
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  margin-top: 0.3rem;
+  display: block;
+}
 
 /* 标签列表 */
 .tags {
@@ -154,7 +146,6 @@ a {
 }
 .tags a {
   text-decoration: none;
-  color: inherit;
   font-size: 1.1rem;
   border-bottom: 3px solid #cbf8df;
   box-shadow: inset 0 -4px 0 #cbf8df;
@@ -212,26 +203,20 @@ a {
   .posts {
     text-align: left;
   }
-
-  .post-item-date {
-    font-size: 1.1rem;
-    text-align: right;
-    float: right;
-  }
-
-  .post-item-link {
+  .posts .post-item-link {
     text-overflow: ellipsis;
     max-width: calc(100% - 120px);
     white-space: nowrap;
     overflow: hidden;
   }
+  .posts .post-item-date {
+    font-size: 1.1rem;
+    text-align: right;
+    float: right;
+  }
 
   .article-title {
     font-size: 1.5rem;
-  }
-
-  .footer-links {
-    font-size: inherit;
   }
 }
 
