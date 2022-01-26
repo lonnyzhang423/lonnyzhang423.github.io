@@ -139,9 +139,8 @@ code {
 }
 .posts .post-item-date {
   color: #ccc;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.3rem 0;
-  margin-top: 0.3rem;
   display: block;
 }
 
@@ -202,14 +201,6 @@ code {
 }
 
 @media (min-width: 600px) {
-  .header {
-    padding: 1.5rem 0;
-  }
-
-  .nav-links {
-    font-size: 1.1rem;
-  }
-
   .posts {
     text-align: left;
   }
@@ -220,13 +211,9 @@ code {
     overflow: hidden;
   }
   .posts .post-item-date {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: right;
     float: right;
-  }
-
-  .article-title {
-    font-size: 1.5rem;
   }
 }
 
