@@ -7,8 +7,8 @@ body {
   color: #333;
   background: #fff;
   font-size: 16px;
-  font-size: 16px;
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +23,7 @@ h6 {
   color: #222;
 }
 
-code {
+:not(pre) > code {
   border-radius: 2px;
   padding: 2px 4px;
   color: #333;
@@ -49,6 +49,7 @@ code {
   margin: 0 auto;
   padding: 0 1rem;
   text-align: right;
+  line-height: 1.2;
 }
 .nav .nav-links {
   margin: 0;
@@ -73,7 +74,6 @@ code {
   margin: 2rem auto 0.6rem;
   padding: 0 1.2rem;
   font-size: 1rem;
-  line-height: 1.8;
 }
 .main img {
   max-width: 100%;
@@ -149,7 +149,6 @@ code {
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1.8;
   outline: none;
 }
 .tags a {
@@ -164,13 +163,6 @@ code {
 .tags a:hover,
 .tags a:focus {
   background: #cbf8df;
-}
-
-.highlight {
-  border-radius: 3px;
-  position: relative;
-  margin: 1.2rem 0px;
-  font-size: 1rem;
 }
 
 .footer {
