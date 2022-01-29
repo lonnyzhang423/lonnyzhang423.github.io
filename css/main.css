@@ -115,7 +115,7 @@ h6 {
   padding: 0;
   list-style: none;
   line-height: 1.3;
-  text-align: center;
+  text-align: left;
 }
 .posts .post-title {
   font-size: 2rem;
@@ -124,24 +124,32 @@ h6 {
 .posts .post-item {
   margin: 0.3rem 0 1rem;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .posts .post-item-link {
   color: #222;
-  display: inline-block;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.3rem 0;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 4rem);
+  white-space: nowrap;
+  overflow: hidden;
   border-bottom: 1px solid #ddd;
 }
 .posts .post-item-link:hover {
   border-bottom-color: #222;
 }
 .posts .post-item-date {
+  max-width: 8rem;
   color: #ccc;
   font-size: 1rem;
-  padding: 0.3rem 0;
-  display: block;
+  text-align: right;
 }
 
 /* 标签列表 */
@@ -190,23 +198,6 @@ h6 {
 .footer .footer-links a:hover,
 .footer .footer-links a:focus {
   color: #222;
-}
-
-@media (min-width: 600px) {
-  .posts {
-    text-align: left;
-  }
-  .posts .post-item-link {
-    text-overflow: ellipsis;
-    max-width: calc(100% - 120px);
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .posts .post-item-date {
-    font-size: 1rem;
-    text-align: right;
-    float: right;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

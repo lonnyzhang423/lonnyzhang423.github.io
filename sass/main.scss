@@ -149,7 +149,7 @@ h6 {
   padding: 0;
   list-style: none;
   line-height: 1.3;
-  text-align: center;
+  text-align: left;
 
   .post-title {
     font-size: 2rem;
@@ -159,15 +159,23 @@ h6 {
   .post-item {
     margin: 0.3rem 0 1rem;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   .post-item-link {
     color: $title-color;
-    display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.3rem 0;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 4rem);
+    white-space: nowrap;
+    overflow: hidden;
     border-bottom: 1px solid $normal-link;
   }
 
@@ -176,10 +184,10 @@ h6 {
   }
 
   .post-item-date {
+    max-width: 8rem;
     color: $secondary-color;
     font-size: 1rem;
-    padding: 0.3rem 0;
-    display: block;
+    text-align: right;
   }
 }
 
@@ -234,25 +242,6 @@ h6 {
     a:hover,
     a:focus {
       color: $title-color;
-    }
-  }
-}
-
-@media (min-width: 600px) {
-  .posts {
-    text-align: left;
-
-    .post-item-link {
-      text-overflow: ellipsis;
-      max-width: calc(100% - 120px);
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .post-item-date {
-      font-size: 1rem;
-      text-align: right;
-      float: right;
     }
   }
 }
