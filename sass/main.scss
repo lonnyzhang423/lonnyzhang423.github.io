@@ -57,7 +57,7 @@ h6 {
 }
 
 .header {
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   position: relative;
   background: $bg-gray;
   border-bottom: 1px solid $divider-color;
@@ -74,7 +74,7 @@ h6 {
   .nav-links {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     list-style: none;
 
     li {
@@ -162,8 +162,15 @@ h6 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: baseline;
+  }
+
+  .post-item-date {
+    width: 4rem;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 0.6rem;
   }
 
   .post-item-link {
@@ -173,7 +180,6 @@ h6 {
     font-weight: bold;
     padding: 0.3rem 0;
     text-overflow: ellipsis;
-    max-width: calc(100% - 4rem);
     white-space: nowrap;
     overflow: hidden;
     border-bottom: 1px solid $normal-link;
@@ -181,13 +187,6 @@ h6 {
 
   .post-item-link:hover {
     border-bottom-color: $title-color;
-  }
-
-  .post-item-date {
-    max-width: 8rem;
-    color: $secondary-color;
-    font-size: 1rem;
-    text-align: right;
   }
 }
 
