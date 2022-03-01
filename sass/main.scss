@@ -57,7 +57,6 @@ h6 {
 }
 
 .header {
-  padding: 1.2rem 0;
   position: relative;
   background: $bg-gray;
   border-bottom: 1px solid $divider-color;
@@ -80,6 +79,7 @@ h6 {
     li {
       display: inline-block;
       margin: 0 0 0 1rem;
+      padding: 1.2rem 0;
     }
 
     li:first-child {
@@ -87,6 +87,7 @@ h6 {
     }
 
     a {
+      padding: 1.2rem 0;
       text-decoration: none;
       color: $title-color;
     }
